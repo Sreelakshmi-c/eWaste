@@ -1,0 +1,26 @@
+h1 {
+    color: wheat;
+}
+#cy {
+    background-color: cornflowerblue;
+    color: white;
+}
+.business {
+    border: solid darkorange;
+}
+div p {
+    align: cenetr;
+    color: darkorange;
+    border: solid black;
+    height: 100px; width: 200px;;
+    border-bottom: solid 2px red;
+    border-left: solid 3px blue;
+    margin: 10px;
+    padding-top: 12px;
+}
+a[target]{
+    background-color: fuchsia;
+}
+h1,h2,p,a,div {
+    background-color: rgb(110, 110, 223));
+}
