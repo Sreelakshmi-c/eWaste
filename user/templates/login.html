@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</head>
+<style>
+	* {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+	body {
+        background-image:linear-gradient(to right ,#48C9B0,white ) ;
+	}
+	.row {
+		background: white;
+		border-radius: 30px;
+		box-shadow: 12px 12px 24px #48C9B0;
+	}
+	img {
+		border-top-left-radius: 30px;
+		border-bottom-left-radius: 30px;
+		
+
+	}
+	.btn1 {
+		border: none;
+		outline: none;
+		height: 50px;
+		width: 100%;
+		background-color: #48C9B0;
+		color: white;
+		border-radius: 4px;
+		font-weight: bold;
+	}
+	.btn1:hover {
+		background: white;
+		border: 1px solid;
+		color: #48C9B0;
+
+	}
+	.navbar{
+        width: 100%;
+        height: 15vh;
+        margin: auto;
+        display: flex;
+        align-items: center;
+    }
+    nav{
+        flex: 1;
+        padding-left: 60px;
+    }
+    nav ul li{
+        display: inline-block;
+        list-style: none;
+        margin: 0px 20px;
+    }
+    .nav1{
+        background-color: #232d60;
+        height: 3.625rem;
+        padding-top: 10px;
+        
+    }
+    .a1{
+        color: #fff;
+    }
+    .a1:hover {
+        color: white;
+    }
+    #a1{
+        color: white;
+    }
+    #a1:hover {
+        color: black;
+    }
+    .log {
+        width: 25px;
+    }
+</style>
+<body>
+	<div class="navbar">
+		<nav class="nav1 navbar-expand-lg fixed-top">
+			<ul class="nav justify-content-end">
+				
+				<li class="nav-item">
+				  <a class="a1 nav-link active" aria-current="page" href="{% url 'first' %}">Home</a>
+				</li>
+				<li class="nav-item">
+				  <a class="a1 nav-link" href="{% url 'services' %}">Book Your Slot</a>
+				</li>
+				<li class="nav-item">
+				  <a class="a1 nav-link" href="#">About</a>
+				</li>
+				<li class="nav-item">
+				  <a class="a1 nav-link " href="{% url 'contact' %}">Contact Us</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link btn btn-outline-light log" id="a1" href="{% url 'login' %}">Login</a>
+				  </li>
+			  </ul>
+		</nav>
+	</div>
+	<section class="form my-4 mx-5">
+		<div class="container">
+			<div class="row no-gutters">
+				<div class="col-lg-5">
+					<img src="{% static 'image/garbage1.png' %}"  class="img-fluid" alt="">
+				</div>
+				<div class="col-lg-7 px-5 pt-5">
+					<h4 style="color: #48C9B0;">Sign into your account</h4>
+					<form action="">
+						<div class="form-row">
+							<div class="col-lg-7">
+								<input type="email" placeholder="Email-Address" class="form-control my-4 p-2">
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="col-lg-7">
+								<input type="password" placeholder="********" class="form-control my-4 p-2">
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="col-lg-7">
+								<a href="{% url 'services' %}"><button type="button" class="btn1 mt-3 mb-5">Login</button></a>
+							</div>
+						</div>
+						<a href="{% url 'forgot' %}">Forgot Password ?</a>
+						<p>Don't have an account ?</p><a href="{% url 'reg' %}"><p>Create account</p></a>
+					</form>
+					 
+				</div>
+			</div>
+		</div>
+
+	</section>
+</body>
+</html>
