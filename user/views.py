@@ -15,5 +15,7 @@ def fnServices(request4):
     return render(request4,'services.html')
 def fnReg(request5):
     return render(request5,'reg.html')
+def fnAbout(request6):
+    return render(request6,'about.html')
 
 

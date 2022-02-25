@@ -101,6 +101,15 @@
     .log {
         width: 25px;
     }
+    form
+		{
+            /* border: solid 1px black; */
+            padding-top: 10px;
+            background-color: rgba(255, 255, 255, 0.527);
+            height: 110vh;
+            width: 550px;
+            border-radius: 15px;
+		}
         
     </style>
 </head>
@@ -117,7 +126,7 @@
                       <a class="a1 nav-link" href="{% url 'services' %}">Book Your Slot</a>
                     </li>
                     <li class="nav-item">
-                      <a class="a1 nav-link" href="#">About</a>
+                      <a class="a1 nav-link" href="{% url 'about' %}">About</a>
                     </li>
                     <li class="nav-item">
                       <a class="a1 nav-link " href="{% url 'contact' %}">Contact Us</a>
